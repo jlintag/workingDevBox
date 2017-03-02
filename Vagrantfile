@@ -18,10 +18,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "jlintag/archlinux64base"
   #config.vm.network :private_network, ip: "192.168.68.8"
-
+  
   config.vm.provider :virtualbox do |vb|
     vb.name = "developmentBox"
-    vb.gui = true
     vb.customize ["modifyvm", :id, "--memory", pref["memory"]]
   end
 
